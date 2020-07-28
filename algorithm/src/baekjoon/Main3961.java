@@ -12,7 +12,7 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.StringTokenizer;
 
-public class Main20582750 {
+public class Main3961 {
 	public static void main(String[] args) throws NumberFormatException, IOException {
 		String keyboard = "qwertyuiopasdfghjkl zxcvbnm";
 
