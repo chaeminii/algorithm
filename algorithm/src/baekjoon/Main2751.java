@@ -1,28 +1,31 @@
 package baekjoon;
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.StringTokenizer;
+import java.io.OutputStreamWriter;
 
-public class Main11004 {
+public class Main2751 {
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		StringTokenizer st = new StringTokenizer(br.readLine());
+		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 		
-		int n = Integer.parseInt(st.nextToken());
-		int k = Integer.parseInt(st.nextToken());
+		int n = Integer.parseInt(br.readLine());
 		int[] arr = new int[n];
 		
-		StringTokenizer stk = new StringTokenizer(br.readLine());
 		
 		for (int i = 0; i < n; i++) {
-			arr[i] = Integer.parseInt(stk.nextToken());
+			arr[i] = Integer.parseInt(br.readLine());
 		}
 		
 		quickSort(arr, 0, arr.length - 1);
 		
-		System.out.println(arr[k - 1]);
+		for (int i : arr) {
+			bw.append(i + "\n");
+		}
+		bw.flush();
+		bw.close();
 	}
 	
 	public static void quickSort(int[] arr, int start, int end) {
